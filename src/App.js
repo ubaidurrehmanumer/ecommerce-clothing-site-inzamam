@@ -2,13 +2,9 @@ import Home from "./routes/home/home.component";
 import {Routes, Route} from "react-router-dom"
 import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
+import Shop from "./routes/shop/shop.component";
+import Checkout from "./routes/checkout/checkout.component";
 
-
-const Shop = ()=>{
-  return <div>
-    <h1>Hello Shopping</h1>
-  </div>
-}
 
 
 const  App= ()=> {
@@ -18,10 +14,13 @@ const  App= ()=> {
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop />} />
             <Route path="auth" element={<Authentication />} />
-
+                // These are roots for our complete App and Also entry Point
             </Route>
+            <Route path="checkout" element={<Checkout />} />
             
           </Routes>
+          
+          
         )
 }
 
